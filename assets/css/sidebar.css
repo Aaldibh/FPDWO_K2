@@ -1,0 +1,93 @@
+/* ===============================
+   SIDEBAR WRAPPER
+================================ */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #1e1e2d;   /* Dark Elegant */
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+
+/* ===============================
+   BRAND (LOGO + TEXT)
+================================ */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar-brand i {
+    font-size: 24px;
+    color: #ffcc00;
+}
+
+
+/* ===============================
+   NAV LINKS
+================================ */
+.sidebar .nav-link {
+    color: #cfcfd6;  /* Soft white */
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.sidebar .nav-link i {
+    font-size: 18px;
+}
+
+
+/* Hover Stylish */
+.sidebar .nav-link:hover {
+    background: #2a2a3b;
+    color: #ffffff;
+    border-left: 4px solid #ffcc00;
+}
+
+
+/* Active Menu */
+.sidebar .nav-link.active {
+    background: #2e2e44;
+    color: #fff;
+    border-left: 4px solid #ffcc00;
+}
+
+
+/* ===============================
+   SECTION HEADING
+================================ */
+.sidebar-heading {
+    font-size: 12px;
+    color: #8f8fa1;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+
+/* ===============================
+   DIVIDER
+================================ */
+.sidebar-divider {
+    border: 0;
+    border-top: 1px solid #343446;
+    margin: 10px 0;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Schema name="advdw">
+
+    <Cube name="Jual" defaultMeasure="Amount">
+        <Table name="factsales"/>
+
+        <Dimension name="Product" foreignKey ="ProductID">
+            <Hierarchy hasAll="true" allMemberName="All Product" primaryKey ="ProductID">
+            <Table name="dimproduct"/>
+            <Level name="productname" column="ProductName"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Time" foreignKey="DateKey">
+            <Hierarchy hasAll="true" allMemberName="All Times" primaryKey="DateKey">
+            <Table name="dimtime" />
+            <Level name="Year" column="Year" type="Numeric" uniqueMembers="true"/>
+            <Level name="Month" column="Month" uniqueMembers="false" type="Numeric"/>
+            <Level name="Date" column="Day" uniqueMembers="false" type="Numeric"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Territory" foreignKey = "TerritoryID">
+            <Hierarchy hasAll="true" allMemberName="All Territory" primaryKey ="TerritoryID">
+                <Table name="dimterritory" />
+                <Level name="Country" column="CountryRegion"/>
+                <Level name="TerritoryName" column="TerritoryName"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Customer" foreignKey="CustomerID">
+            <Hierarchy hasAll ="true" allMemberName="All Stores" primaryKey = "CustomerID">
+            <Table name="dimcustomer"/>
+            <Level name="NamaCust" column="CustomerName"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="TotalQuantity" column="OrderQty" aggregator="sum" formatString="Standard"/>
+        <Measure name="Amount" column="SalesAmount" aggregator="sum" formatString="Currency"/>
+        <Measure name="UnitPrice" column="UnitPrice" aggregator="avg" formatString="Standard"/>
+    </Cube>
+</Schema>
+
+

@@ -1,0 +1,85 @@
+
+#content-wrapper {
+    margin-left: 225px;              /* Offset sesuai lebar sidebar */
+    padding: 30px;
+    background: #f4f5fa;             /* Soft light background */
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.content {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    transition: 0.2s ease-in-out;
+}
+
+/* Hover efek biar elegant */
+.content:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.content h2 {
+    font-weight: 700;
+    color: #2b2b3c;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.content ul {
+    margin-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 6px;
+    color: #444;
+}
+
+/* Judul deskripsi grafik */
+.highcharts-description {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4e73df;
+    margin-bottom: 20px;
+}
+
+/* Area grafik */
+.grafik {
+    width: 100%;
+    height: 450px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    /* box-shadow: 0 4px 15px rgba(0,0,0,0.08); */
+    border: solid 2px black;
+    transition: .3s ease-in-out;
+}
+
+/* .grafik:hover {
+    border: solid 1px black
+} */
+
+/* Scroll to top button */
+.scroll-to-top {
+    background-color: #4e73df;
+    border-radius: 50%;
+}
+
+.scroll-to-top:hover {
+    background-color: #2e59d9;
+}
+
+/* RESPONSIVE (Mobile & Tablet) */
+@media (max-width: 992px) {
+    #content-wrapper {
+        margin-left: 0;           /* Sidebar ketutup / collapsed */
+        padding: 20px;
+    }
+}
